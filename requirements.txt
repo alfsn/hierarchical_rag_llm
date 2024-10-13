@@ -1,0 +1,6 @@
+sentence-transformers
+numpy
+langchain
+flask
+psycopg2-binary
+pgvector

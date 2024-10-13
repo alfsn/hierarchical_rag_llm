@@ -1,0 +1,10 @@
+docker build -t llm-architecture .
+
+docker run -p 5000:5000 llm-architecture
+
+# The API will now be accessible at http://localhost:5000/ask
+
+POST:
+{
+  "question": "How can META's Ads for business help me?"
+}
