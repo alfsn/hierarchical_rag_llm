@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from langchain.llms import Mixtral, LLaMA, HuggingFaceHub
+from langchain.llms import LLaMA, HuggingFaceHub
 from langchain import PromptTemplate, LLMChain
 import config
 
