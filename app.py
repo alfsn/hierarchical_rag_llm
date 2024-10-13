@@ -37,7 +37,7 @@ def ask_question():
         summarizer = HierarchicalSummarizer(llm_chain.llm)
         external_info = summarizer.summarize(external_info)
 
-    answer = llm.generate(question, external_info)
+    answer = llm_chain.run(context=external_info, question=question)
     
     filtered_answer = privacy_filter.filter(answer)
     
