@@ -3,6 +3,8 @@ numpy
 langchain
 langchain-community
 transformers
+huggingface_hub
 flask
 psycopg2-binary
 pgvector
+dotenv
