@@ -1,7 +1,12 @@
+import os
+from dotenv import load_dotenv
 from langchain.llms import Mixtral, LLaMA
 from langchain import PromptTemplate, LLMChain
 import config
 
+load_dotenv()
+
+api_token = os.environ.get("HUGGINGFACEHUB_API_TOKEN")
 
 class LLMSelector:
     def __init__(self, mixtral_config={}, llama_config={}):
