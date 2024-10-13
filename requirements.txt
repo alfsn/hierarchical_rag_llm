@@ -1,6 +1,8 @@
 sentence-transformers
 numpy
 langchain
+langchain-community
+transformers
 flask
 psycopg2-binary
 pgvector
