@@ -10,11 +10,11 @@ import config
 app = Flask(__name__)
 
 embedding_generator = EmbeddingGenerator()
-faq_db = FAQDatabase()
+faq_db = FAQDatabase(config.DB_CONNECTION_STRING)
 question_categorizer = QuestionCategorizer(faq_db)
-llm_selector = LLMSelector()
-external_info_db = ExternalInfoDatabase()
-qa_db = QADatabase()
+llm_selector = LLMSelector(config.MIXTRAL_CONFIG, config.LLAMA_CONFIG)
+external_info_db = ExternalInfoDatabase(config.DB_CONNECTION_STRING)
+qa_db = QADatabase(config.DB_CONNECTION_STRING)
 privacy_filter = PrivacyFilter()
 
 #  The following function will be associated with the URL /ask. It will trigger the execution of the ask_question function. the route should only handle POST requests.
