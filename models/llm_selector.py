@@ -4,7 +4,7 @@ from langchain.llms import Mixtral, LLaMA, HuggingFaceHub
 from langchain import PromptTemplate, LLMChain
 import config
 
-load_dotenv()
+load_dotenv('../../.env')
 
 api_token = os.environ.get("HUGGINGFACEHUB_API_TOKEN")
 
