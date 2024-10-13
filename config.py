@@ -4,12 +4,12 @@
 DB_CONNECTION_STRING = "postgresql://user:password@localhost/dbname"
 
 # LLM Configurations
-MIXTRAL_CONFIG = {
+TECH_CONFIG = {
     "temperature": 0.7,
     "max_tokens": 1000,
 }
 
-LLAMA_CONFIG = {
+NONTECH_CONFIG = {
     "temperature": 0.5,
     "max_tokens": 800,
 }
