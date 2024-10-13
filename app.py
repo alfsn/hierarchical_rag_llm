@@ -29,11 +29,12 @@ def ask_question():
     # return technical or non/technical
     category = question_categorizer.categorize(embedding)
     
-    llm = llm_selector.select_llm(category)
+    llm_chain = llm_selector.select_llm(category)
     
     # Retrieve external info (for RAG)
     external_info = external_info_db.get_relevant_info(embedding)
     if len(external_info) > config.MAX_EXTERNAL_INFO_LENGTH:
+        summarizer = HierarchicalSummarizer(llm_chain.llm)
         external_info = summarizer.summarize(external_info)
 
     answer = llm.generate(question, external_info)
