@@ -1,0 +1,5 @@
+name: hierarchical_rag_llm
+
+dependencies:
+  - python=3.11
+  - pip
